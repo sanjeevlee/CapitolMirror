@@ -4,11 +4,11 @@ import { cn } from "lib/utils"
 import {
   Moon,
   Sun,
-  Menu,
   X,
   ChevronUp,
   ChevronDown,
   ChevronRight,
+  MenuIcon,
 } from "lucide-react"
 import Image from "next/image"
 import React, { HTMLAttributes, useEffect, useState } from "react"
@@ -307,15 +307,23 @@ function NavHeader({ className, ...otherProps }: NavProps) {
         </div>
 
         <div className="hidden md:flex items-center gap-2">
-          <Button
-            onClick={() =>
-              setTheme((prev) => (prev === "dark" ? "light" : "dark"))
-            }
-            variant="outline"
-            className={`cursor-pointer ${theme === "dark" ? "dark:text-yellow-500" : ""}`}
-          >
-            {theme === "dark" ? <Moon size={18} /> : <Sun size={18} />}
-          </Button>
+        <Button
+  onClick={() => setTheme(prev => prev === "dark" ? "light" : "dark")}
+  variant="ghost"
+  className="relative w-10 h-10 rounded-full border border-border flex items-center justify-center
+             hover:bg-accent transition-all duration-300"
+>
+  <Sun
+    size={20}
+    className={`absolute transition-all duration-300 
+      ${theme === "dark" ? "opacity-0 rotate-90 scale-0" : "opacity-100 rotate-0 scale-100"}`}
+  />
+  <Moon
+    size={20}
+    className={`absolute transition-all duration-300 
+      ${theme === "dark" ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-90 scale-0"}`}
+  />
+</Button>
 
           {/* Call Button */}
           <a href="tel:+405-789-1485">
@@ -332,19 +340,28 @@ function NavHeader({ className, ...otherProps }: NavProps) {
 
         {/* Mobile Controls */}
         <div className="flex items-center gap-2 md:hidden justify-start">
-          <Button
-            onClick={() =>
-              setTheme((prev) => (prev === "dark" ? "light" : "dark"))
-            }
-            variant={theme === "dark" ? "default" : "secondary"}
-            className={`cursor-pointer ${theme === "dark" ? "dark:text-yellow-500" : ""
-              }`}
-          >
-            {theme === "dark" ? <Moon size={18} /> : <Sun size={18} />}
-          </Button>
+        <Button
+  onClick={() => setTheme(prev => prev === "dark" ? "light" : "dark")}
+  variant="ghost"
+  className="relative w-10 h-10 rounded-full border border-border flex items-center justify-center
+             hover:bg-accent transition-all duration-300"
+>
+  <Sun
+    size={20}
+    className={`absolute transition-all duration-300 
+      ${theme === "dark" ? "opacity-0 rotate-90 scale-0" : "opacity-100 rotate-0 scale-100"}`}
+  />
+  <Moon
+    size={20}
+    className={`absolute transition-all duration-300 
+      ${theme === "dark" ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-90 scale-0"}`}
+  />
+</Button>
 
-          <Button variant={"secondary"} onClick={() => setIsSidebarOpen(true)}>
-            <Menu size={30} />
+
+          <Button variant={"secondary"} onClick={() => setIsSidebarOpen(true)} className="relative w-10 h-10 rounded-full border border-border flex items-center justify-center
+             hover:bg-accent transition-all duration-300">
+            <MenuIcon size={30} />
           </Button>
         </div>
       </div>
