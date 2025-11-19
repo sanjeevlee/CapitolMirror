@@ -1,1 +1,101 @@
-node_modules
+# =========================================
+# Node / Yarn / PNPM / Bun
+# =========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun.lockb
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+*.log.*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build Output
+.next/
+out/
+dist/
+build/
+coverage/
+
+# Next.js Cache
+.next/
+.next/cache/
+
+# Turbo / SWC
+turbo/
+.swc/
+
+# Static Export
+out/
+
+# =========================================
+# macOS
+# =========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+__MACOSX/
+
+# =========================================
+# Vercel / Netlify
+# =========================================
+.vercel/
+.netlify/
+
+# =========================================
+# Editor / IDE
+# =========================================
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# JetBrains (WebStorm)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# =========================================
+# TypeScript
+# =========================================
+*.tsbuildinfo
+
+# =========================================
+# Lint / Formatting
+# =========================================
+.eslintcache
+.prettier-cache
+
+# =========================================
+# Misc
+# =========================================
+*.zip
+*.tar.gz
+*.tmp
+*.temp
+*.bak
+*.swp
+*.sock
+
+# Local server files
+tmp/

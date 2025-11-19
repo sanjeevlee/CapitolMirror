@@ -64,12 +64,14 @@ export default function Hero() {
           >
             {/* Background image */}
             <Image
-              src={slide.image}
-              alt={slide.title || slide.badge || `Slide ${index + 1}`}
-              fill
-              priority={index === 0}
-              className="object-cover"
-            />
+  src={slide.image}
+  alt={slide.title || slide.badge || `Slide ${index + 1}`}
+  fill
+  priority={index === 0}
+  className="object-cover pointer-events-none"
+  draggable={false}
+/>
+
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/60" />
@@ -142,23 +144,26 @@ export default function Hero() {
 
       {/* Navigation arrows */}
       <button
-        onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
+  onClick={prev}
+  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white 
+             rounded-full p-2 hover:bg-black/70 transition pointer-events-auto z-50"
+>
+  <ChevronLeft className="w-6 h-6" />
+</button>
 
-      <button
-        onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
+
+<button
+  onClick={next}
+  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white 
+             rounded-full p-2 hover:bg-black/70 transition pointer-events-auto z-50"
+>
+  <ChevronRight className="w-6 h-6" />
+</button>
+
 
       {/* Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 pointer-events-auto z-50">
+
         {heroSlides.map((_, i) => (
           <button
             key={i}
