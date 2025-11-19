@@ -115,7 +115,7 @@ const CustomizationSection = () => {
  <div className="relative w-full h-[250px] sm:h-[450px] lg:h-[650px]">
 
     <Image
-      src="/Hero4.jpg"
+      src="/hero4.jpg"
       alt="Custom glass staircase with modern fittings"
       fill
       sizes="(min-width: 1024px) 50vw, (min-width: 640px) 60vw, 100vw"
