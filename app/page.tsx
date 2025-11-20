@@ -9,6 +9,7 @@ import ServiceAreaContent from "@/components/ServiceArea/ServiceArea";
 import AboutCapitolGlass from "@/components/Home/AboutUs";
 import NewOwnershipSection from "@/components/Home/NewOwnershipSection";
 import CustomizationSection from "@/components/Home/CustomizationSection";
+import HomeGallery from "@/components/Home/HomeGallery";
 export default function Home() {
 
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <InvestorsSection />
         <CustomizationSection />
         <GettingStarted />
+        <HomeGallery/>
         <AboutCapitolGlass />
         <ServiceAreaContent />
         <CategoriesGrid />

@@ -57,7 +57,7 @@ export default function ImageCardCarousel() {
                     decoding="async"
                     suppressHydrationWarning
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-tb from-black/70 to-transparent p-4">
                     <h3 className="text-white text-xl font-semibold">{item.name}</h3>
                   </div>
                 </div>

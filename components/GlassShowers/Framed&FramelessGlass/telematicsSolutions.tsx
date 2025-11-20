@@ -13,8 +13,11 @@ const telematicsSolutions = [
   { image: "/FramedSection/Framedglass10.png" },
   { image: "/FramedSection/Framedglass11.png" },
   { image: "/FramedSection/Framedglass12.png" },
+  { image: "/Frameless/Frameless1.png" },
+  { image: "/Frameless/Frameless2.png" },
+  { image: "/Frameless/Frameless3.png" },
+  { image: "/Test/Test5.png" },
 ];
-
 export default function TelematicsCards() {
   return (
     <section className="py-10 px-4 md:px-20 container mx-auto">
@@ -26,7 +29,6 @@ export default function TelematicsCards() {
           See examples of some of the framed and frameless glass shower and tub enclosures we have installed in the Oklahoma City area.
         </p>
       </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
   {telematicsSolutions.map((solution) => (
     <div
@@ -47,7 +49,6 @@ export default function TelematicsCards() {
     </div>
   ))}
 </div>
-
     </section>
   );
 }

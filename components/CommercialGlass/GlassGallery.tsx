@@ -38,6 +38,19 @@ const galleryItems = [
   img: "/Commercialgallery/Commercialgallery9.png",
   title: "Glass storefronts",
  },
+
+   {
+    img: "/CommercialOffice/CommercialOffice2.png",
+    title: "Glass Half Door",
+   },
+   {
+    img: "/CommercialOffice/CommercialOffice1.png",
+    title: "glass entryways",
+   },
+   {
+    img: "/CommercialOffice/CommercialOffice3.png",
+    title: "Framed Glass GateWay",
+   },
 ];
 
 export default function GlassGallery() {
@@ -45,7 +58,7 @@ export default function GlassGallery() {
   <section className="relative py-10 ">
    <div className="container mx-auto px-6 text-center">
     {/* Section Heading */}
-    <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">
+    <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-rl from-cyan-500 to-blue-600">
      Tempered Glass Image Gallery
     </h2>
     <p className="text-gray-600 dark:text-gray-400 mb-14 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -73,7 +86,7 @@ export default function GlassGallery() {
          decoding="async"
         />
         {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
        </div>
 
        {/* Title Overlay */}
@@ -89,7 +102,7 @@ export default function GlassGallery() {
    </div>
 
    {/* Subtle background pattern */}
-   <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-50/30 via-transparent to-transparent dark:from-blue-900/10"></div>
+   <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-50/30 via-transparent to-transparent dark:from-blue-900/10"></div>
   </section>
  );
 }
